@@ -1,10 +1,32 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <meta charset="utf-8">
-    <title></title>
+    <title>Bikes App</title>
   </head>
   <body>
-    <h1>Template</h1>
+    <div class="container">
+      <h1>List Stolen Bikes</h1>
+      <form id="bike">
+        <div class="form-group">
+          <label for="date">Enter today's date:</label>
+          <input id="date" type="text">
+        </div>
+        <div class="form-group">
+          <label for="location">Enter location:</label>
+          <input id="location" type="text">
+        </div>
+        <button class="btn btn-success" id="bikeLocation" type="submit">List</button>
+      </form>
+      <br>
+      <div class="showErrors"></div>
+      <br>
+      <div class="showOutput"></div>
+      <br>
+      <div class="showSerial"></div>
+      <br>
+      <div class="showColor"></div>
+      <br>
+      <div class="showDate"></div>
+    </div>
   </body>
 </html>
