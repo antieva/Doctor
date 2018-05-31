@@ -5,22 +5,22 @@
   </head>
   <body>
     <div class="container">
-      <h1>List Stolen Bikes</h1>
+      <h1>List of Stolen Bikes</h1>
       <form id="bike">
-        <h4>Input time range.</h4>
-        <div class="form-group">
-          <label for="startDate">From:</label>
-          <input id="startDate" type="text">
+        <div class="inputForm">
+          <h4>Input Time Range:</h4>
+          <div class="form-group">
+            <input id="startDate" type="date">
+          </div>
+          <div class="form-group">
+            <input id="endDate" type="date">
+          </div>
+          <div class="form-group">
+            <label for="location">Enter location:</label>
+            <input id="location" placeholder="Seattle" type="text">
+          </div>
+          <button class="btn btn-primary" id="bikeLocation" type="submit">List</button>
         </div>
-        <div class="form-group">
-          <label for="endDate">Till:</label>
-          <input id="endDate" type="text">
-        </div>
-        <div class="form-group">
-          <label for="location">Enter location:</label>
-          <input id="location" type="text">
-        </div>
-        <button class="btn btn-success" id="bikeLocation" type="submit">List</button>
       </form>
       <br>
       <div id="ouput">

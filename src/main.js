@@ -43,6 +43,7 @@ $(document).ready(function() {
       let counter = 0;
       $('#output').hide();
       $('.showOutput').empty();
+      $('.showHowMany').empty();
       body.bikes.forEach(function(bike) {
         let formatedDate = timeConverter(bike.date_stolen);
         if (newStartDate < bike.date_stolen && newEndDate > bike.date_stolen) {
@@ -54,7 +55,7 @@ $(document).ready(function() {
         }
       })
       if (counter === 0) {
-        $('.showOutput').text(`No bikes were stolen between ${startDate} and ${endDate}.`);
+        $('.showOutput').text(`No bikes were stolen between ${startDate} and ${endDate} in ${location} area.`);
       } else {
         $('.showHowMany').text(`There were ${counter} bikes stolen between ${startDate} and ${endDate} in ${location} area.`);
       }
