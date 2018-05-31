@@ -30,17 +30,24 @@ $(document).ready(function() {
       request.send();
     });
     console.log(promise);
+    let rangeDate = 604800;
+    date = parseInt((new Date(date).getTime() / 1000).toFixed(0))
+    console.log(date);
 
     promise.then(function(response) {
       let body = JSON.parse(response);
       body.bikes.forEach(function(bike) {
-        console.log(bike.date_stolen);
+        //console.log(bike.date_stolen);
         let formatedDate = timeConverter(bike.date_stolen);
-        console.log(formatedDate);
-        $('.showOutput').append('<p>' + 'Brand: ' +  '<span class="big">' + `${bike.manufacturer_name}.` + '</span>' + '</p>');
-        $('.showOutput').append('<p>' + `Serial number: ${bike.serial}.` + '</p>');
-        $('.showOutput').append('<p>' + `Frame colors: ${bike.frame_colors}.` + '</p>');
-        $('.showOutput').append('<p>' + `Date stolen: ${formatedDate}.` + '</p>');
+        //console.log(formatedDate);
+        if (date - rangeDate > bike.date_stolen) {
+          $('.showOutput').append('<p>' + 'Brand: ' +  '<span class="big">' + `${bike.manufacturer_name}.` + '</span>' + '</p>');
+          $('.showOutput').append('<p>' + `Serial number: ${bike.serial}.` + '</p>');
+          $('.showOutput').append('<p>' + `Frame colors: ${bike.frame_colors}.` + '</p>');
+          $('.showOutput').append('<p>' + `Date stolen: ${formatedDate}.` + '</p>');
+        } else {
+          $('.showOutput').text("No bikes were stolen for last 7 days");
+        }
       })
     }, function(error) {
       $('.showErrors').text(`There was an error processing your request: ${error.message}`);
