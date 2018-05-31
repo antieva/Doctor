@@ -7,9 +7,14 @@
     <div class="container">
       <h1>List Stolen Bikes</h1>
       <form id="bike">
+        <h4>Input time range.</h4>
         <div class="form-group">
-          <label for="date">Enter today's date:</label>
-          <input id="date" type="text">
+          <label for="startDate">From:</label>
+          <input id="startDate" type="text">
+        </div>
+        <div class="form-group">
+          <label for="endDate">Till:</label>
+          <input id="endDate" type="text">
         </div>
         <div class="form-group">
           <label for="location">Enter location:</label>
@@ -18,15 +23,15 @@
         <button class="btn btn-success" id="bikeLocation" type="submit">List</button>
       </form>
       <br>
-      <div class="showErrors"></div>
-      <br>
-      <div class="showOutput"></div>
-      <br>
-      <div class="showSerial"></div>
-      <br>
-      <div class="showColor"></div>
-      <br>
-      <div class="showDate"></div>
+      <div id="ouput">
+        <div class="showErrors"></div>
+        <br>
+        <br>
+        <div class="showHowMany"></div>
+        <br>
+        <div class="showOutput"></div>
+        <br>
+      </div>
     </div>
   </body>
 </html>
