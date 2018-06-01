@@ -1,4 +1,4 @@
-#Template
+#Doctor Lookup App
 
 Setup instructions:
 
