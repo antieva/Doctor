@@ -7,9 +7,8 @@ import './main.js';
 var Promise = require('es6-promise').Promise;
 
 
-$(document).ready(function() {
-  $('#search').submit(function(event) {
-    event.preventDefault();
-
-  });
-});
+export function get() {
+  let issue = $('#simptom').val();
+  $('#simptom').val("");
+  return issue;
+}
