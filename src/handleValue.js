@@ -63,7 +63,9 @@ export function handle(value) {
    })
    if (counter === 0) {
      $('.showOutput').text(`No doctors were found.`);
-   }
+   } else {
+        $('.showHowMany').text(`Search result: ${counter} doctors.`);
+      }
  }, function(error) {
    $('.showErrors').text(`There was an error processing your request: ${error.message}`);
  });
