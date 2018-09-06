@@ -6,7 +6,7 @@
 
 ## Description
 
-A website where users may enter a medical issue (ie: “sore throat”, "rash", etc.) into a form, submit it, and receive a list of doctors in the city who can treat their medical issue.
+A website where users may enter a medical issue (for example: “sore throat”, "rash", etc.) into a form, submit it, and receive a list of doctors in the city who can treat their medical issue.
 
 
 ##Setup instructions:
@@ -15,7 +15,7 @@ A website where users may enter a medical issue (ie: “sore throat”, "rash", 
 
 * run command $ git clone in terminal
 
-* cd to Galactic_Age_Calculator
+* cd to Doctor_Lookup
 
 * run command $ npm install in terminal
 
