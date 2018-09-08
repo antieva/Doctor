@@ -19,6 +19,8 @@ A website where users may enter a medical issue (for example: “sore throat”,
 
 * run command $ npm install in terminal
 
+* create .env file in the main directory folder and add your API keys there: exports.apiKey = YourAPIKey;
+
 * run command $ npm run start
 
 
